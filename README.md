@@ -82,6 +82,8 @@ This short walkthrough shows:
 - where tags were applied (resource group vs resource level)
 - why these four tags were chosen as the minimum viable FinOps set
 
+https://github.com/user-attachments/assets/dc0c6889-102b-48ef-b561-060014328bb5
+
 ➡️ `/videos/tagging-standards-walkthrough.mp4`
 
 
