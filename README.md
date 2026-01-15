@@ -1,4 +1,4 @@
-# Azure FinOps Guardrails: Discovering and Governing SaaS Cloud Spend
+# Azure FinOps Guardrails: Discovering and Governing Cloud Spend
 
 ## Executive Summary (Video)
 
