@@ -9,8 +9,7 @@
 - How I handled bootstrap exceptions without weakening controls
 - How budget guardrails closed the loop
 
-➡️ `/videos/policy-compliance-walkthrough.mp4`
-`https://github.com/AskTonyTaylor/azure-finops-guardrails/blob/main/videos/executive-summary-finops-guardrails-cloud-spend.mp4.mp4`
+https://github.com/user-attachments/assets/5361b770-df80-4b78-8a44-1ea36e652a0b
 
 ## Why I Built This Project
 
