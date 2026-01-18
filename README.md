@@ -2,16 +2,14 @@
 
 ## Executive Summary (Video)
 
-🎥 **2–3 minute executive walkthrough (coming soon)**
+🎥 **This video explains:**
+- How I identified cost discoverability gaps in a SaaS environment
+- Why missing tags were the real blocker to FinOps maturity
+- How Azure Policy surfaced real governance friction
+- How I handled bootstrap exceptions without weakening controls
+- How budget guardrails closed the loop
 
-This video will explain:
-- how I identified cost discoverability gaps in a SaaS environment
-- why missing tags were the real blocker to FinOps maturity
-- how Azure Policy surfaced real governance friction
-- how I handled bootstrap exceptions without weakening controls
-- how budget guardrails closed the loop
-
-➡️ Placeholder: `/videos/azure-finops-ex-summary.mp4`
+`/videos/executive-summary-finops-guardrails-cloud-spend.mp4`
 
 ## Why I Built This Project
 
@@ -19,7 +17,7 @@ While working in a SaaS environment, I was asked a deceptively simple question:
 
 > “Where is our cloud spend actually going?”
 
-The problem wasn’t that costs were unavailable, Azure Cost Management existed.  
+The problem wasn’t that costs were unavailable; Azure Cost Management existed.  
 The problem was that **costs were not attributable**.
 
 Resources existed across regions and services, but:
