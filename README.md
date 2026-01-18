@@ -3,11 +3,11 @@
 ## Executive Summary (Video)
 
 🎥 **This video explains:**
-- How I identified cost discoverability gaps in a SaaS environment
-- Why missing tags were the real blocker to FinOps maturity
-- How Azure Policy surfaced real governance friction
-- How I handled bootstrap exceptions without weakening controls
-- How budget guardrails closed the loop
+- How I identified cloud cost discoverability gaps in a SaaS environment
+- Why missing ownership and tagging blocked FinOps maturity
+- How Azure Policy exposed real-world governance friction
+- How I applied controlled bootstrap exceptions without weakening long-term controls
+- How budget guardrails restored visibility and accountability
 
 https://github.com/user-attachments/assets/5361b770-df80-4b78-8a44-1ea36e652a0b
 
