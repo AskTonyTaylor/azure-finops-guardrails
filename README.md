@@ -18,7 +18,7 @@ While working in a SaaS environment, I was asked a deceptively simple question:
 > “Where is our cloud spend actually going?”
 
 The problem wasn’t that costs were unavailable; Azure Cost Management existed.  
-The problem was that **costs were not attributable**.
+The problem was that costs were not attributable.
 
 Resources existed across regions and services, but:
 - Ownership wasn’t clear
@@ -26,15 +26,15 @@ Resources existed across regions and services, but:
 - Budgets and alerts lacked context
 - Investigations turned into manual archaeology
 
-This project documents how I identified that gap and implemented **practical FinOps guardrails** to make cloud spend *discoverable, attributable, and governable* without breaking engineering velocity.
+This project documents how I identified that gap and implemented practical FinOps guardrails to make cloud spend *discoverable, attributable, and governable* without breaking engineering velocity.
 
 ## The Core Problem I Identified
 
 The root issue wasn’t tooling.  
-It was **missing structure**.
+It was missing structure.
 
 Specifically:
-- Sesources existed without consistent tags
+- Resources existed without consistent tags
 - Cost reports grouped spend, but couldn’t explain it
 - Alerts fired, but nobody clearly owned the response
 - Governance controls existed, but weren’t aligned to real workflows
@@ -44,11 +44,11 @@ We could see *how much* we were spending but not *who* or *why*.
 
 ## My Approach (High-Level)
 
-Rather than jump straight to optimization or automation, I focused on **foundational FinOps hygiene**:
+Rather than jump straight to optimization or automation, I focused on foundational FinOps hygiene:
 
-1. Establish a **minimum tagging standard**
-2. Use **Azure Policy** to continuously audit compliance
-3. Add a **budget guardrail** to surface risk early
+1. Establish a minimum tagging standard
+2. Use Azure Policy to continuously audit compliance
+3. Add a budget guardrail to surface risk early
 4. Handle real-world governance friction intentionally (not dogmatically)
 
 This mirrors how FinOps maturity actually works in production SaaS orgs.
@@ -71,14 +71,14 @@ I intentionally kept the standard small, only what was necessary to answer cost 
 | Env | Production vs non-production |
 | Owner | Who is accountable when costs spike |
 
-This ensures that **every dollar can be explained** without creating tag sprawl.
+This ensures that every dollar can be explained without creating tag sprawl.
 
 🎥 **Video: Tagging Standards Walkthrough**
 
 This short walkthrough shows:
-- how the tagging standard was defined
-- where tags were applied (resource group vs resource level)
-- why these four tags were chosen as the minimum viable FinOps set
+- How the tagging standard was defined
+- Where tags were applied (resource group vs resource level)
+- Why these four tags were chosen as the minimum viable FinOps set
 
 https://github.com/user-attachments/assets/dc0c6889-102b-48ef-b561-060014328bb5
 
@@ -108,7 +108,7 @@ This distinction proved critical once governance controls were applied.
 
 ![Azure policy assignments](screenshots/03-azure-policy-assigned-subscription-scope.png)
 
-I assigned built-in Azure Policy definitions to **audit** missing required tags.
+I assigned built-in Azure Policy definitions to audit missing required tags.
 
 Key decision:
 - I intentionally started with **Audit**, not **Deny**
@@ -150,7 +150,7 @@ https://github.com/user-attachments/assets/0fcb95b9-9993-486b-84fe-763358b48dcf
 ### 5. Applied a Controlled Bootstrap Exception
 
 Rather than weakening policies globally, I:
-- Applied a **temporary policy exclusion** to the platform resource group
+- Applied a temporary policy exclusion to the platform resource group
 - Completed initial setup
 - Kept the workload resource group fully governed
 
@@ -169,7 +169,7 @@ After tags were applied and policies re-evaluated:
 - Cost reports could now be filtered meaningfully
 
 An important observation:
-- Azure Policy evaluation is **eventually consistent**
+- Azure Policy evaluation is eventually consistent
 - Compliance does not update instantly after changes
 - No additional configuration was required, only patience and verification
 
@@ -181,7 +181,7 @@ An important observation:
 ![Budget guardrail](screenshots/09-resource-group-budget-finops-guardrail.png)
 
 
-Finally, I added a **resource group scoped monthly budget** with alerts.
+Finally, I added a resource group scoped monthly budget with alerts.
 
 Why this mattered:
 - Budgets surface risk early
@@ -234,12 +234,12 @@ It was about enabling:
 - Meaningful cost conversations
 - A foundation for future optimization and automation
 
-FinOps only works when **engineering, finance, and governance speak the same language**.  
+FinOps only works when engineering, finance, and governance speak the same language.  
 This project establishes that shared language.
 
 ## Next Steps I Would Take (If Extended)
 
 - Bundle tag policies into an initiative
 - Add remediation where supported
-- evolve audit → deny once teams are trained
-- codify the model in Bicep or Terraform
+- Evolve audit → deny once teams are trained
+- Codify the model in Bicep or Terraform
